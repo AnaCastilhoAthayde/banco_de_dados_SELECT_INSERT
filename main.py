@@ -8,7 +8,7 @@ banco = sqlite3.connect('ricardaofather.db')
 cursor = banco.cursor()
 
 # UPDATE 
-cursor.execute("DELETE FROM funcionarios WHERE idade <20 ")
+cursor.execute("UPDATE funcionarios  SET cargo = 'Analista' WHERE id = 26")
 
 
 #Inserindo na tabela desejada os valores 
