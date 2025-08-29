@@ -1,14 +1,14 @@
 import sqlite3
 
 #Criamos a conexão com o banco e guardamos na variavel 'banco
-banco = sqlite3.connect('escola.db')
+banco = sqlite3.connect('ricardaofather.db')
 
 
 #Criamos a variavel  cursor e colocamos em uma variavel 
 cursor = banco.cursor()
 
-#Criando a tabela  pessoas com os campos necessários 
-# cursor.execute("CREATE TABLE farmacia(id interger,nome text,dosagem VARCHAR(50),preço decima(10,2),fabricante VARCHAR(100),categoria VARCHAR(50),data_validade date)")
+# UPDATE 
+cursor.execute("DELETE FROM funcionarios WHERE idade <20 ")
 
 
 #Inserindo na tabela desejada os valores 
@@ -18,5 +18,5 @@ cursor = banco.cursor()
 banco.commit()
 
 #printar a informação 
-cursor.execute("SELECT nome,nota FROM alunos")
-print(cursor.fetchall())
+#cursor.execute("SELECT salario FROM funcionarios")
+#print(cursor.fetchall())    
